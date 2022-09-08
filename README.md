@@ -95,7 +95,7 @@ It also provides ready to use validation functions for some common use cases:
 
 ## :free: License
 
-Sveltin is free and open-source software licensed under the MIT License.
+prompti is free and open-source software licensed under the MIT License.
 
 ***
 Made with [Charm](https://charm.sh).
