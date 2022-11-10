@@ -58,7 +58,7 @@ func Run(cfg *Config, items []list.Item) (string, error) {
 	cfg.setDefaults(len(items))
 	p := tea.NewProgram(cfg.initialModel(items), tea.WithOutput(os.Stderr))
 
-	tm, err := p.StartReturningModel()
+	tm, err := p.Run()
 	if err != nil {
 		return "", fmt.Errorf("failed to run choose: %w", err)
 	}

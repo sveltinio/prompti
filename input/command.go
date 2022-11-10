@@ -67,7 +67,7 @@ func Run(cfg *Config) (string, error) {
 	cfg.setDefaults()
 	p := tea.NewProgram(cfg.initialModel(), tea.WithOutput(os.Stderr))
 
-	tm, err := p.StartReturningModel()
+	tm, err := p.Run()
 	if err != nil {
 		return "", fmt.Errorf("failed to run input: %w", err)
 	}

@@ -48,7 +48,7 @@ func (cfg *Config) initialModel() model {
 // action with an affirmative or negative answer.
 func Run(cfg *Config) (bool, error) {
 	cfg.setDefaults()
-	m, err := tea.NewProgram(cfg.initialModel(), tea.WithOutput(os.Stderr)).StartReturningModel()
+	m, err := tea.NewProgram(cfg.initialModel(), tea.WithOutput(os.Stderr)).Run()
 
 	if err != nil {
 		return false, fmt.Errorf("unable to run confirm: %w", err)
