@@ -35,6 +35,8 @@ It also provides ready to use validation functions for some common use cases:
 
 ### Default
 
+[Source Code](_examples/input/default/main.go)
+
 <img src="https://statics.sveltin.io/github/prompti/input/input-default.gif" alt="Input example">
 
 ### Default value and validation
@@ -43,11 +45,14 @@ It also provides ready to use validation functions for some common use cases:
 
 ### Custom styles
 
+[Source Code](_examples/input/custom-styles/main.go)
+
 <img src="https://statics.sveltin.io/github/prompti/input/input-styled.gif" alt="Input example with custom styles">
 
-#### Examples
+### Other Examples
 
-[Default](_examples/input/default/main.go) | [Email](_examples/input/email/main.go) | [Password](_examples/input/password/main.go) | [Styled](_examples/input/custom-styles/main.go)
+- [Email](_examples/input/email/main.go)
+- [Password](_examples/input/password/main.go)
 
 ## Choose
 
@@ -55,43 +60,63 @@ It also provides ready to use validation functions for some common use cases:
 
 ### Default
 
+[Source Code](_examples/choose/default/main.go)
+
 <img src="https://statics.sveltin.io/github/prompti/choose/choose-default.gif" alt="Choose example">
 
 ### Custom styles
 
+[Source Code](_examples/choose/custom-styles/main.go)
+
 <img src="https://statics.sveltin.io/github/prompti/choose/choose-styled.gif" alt="Choose example with custom styles">
-
-#### Examples
-
-[Default](_examples/choose/default/main.go)  | [Styled](_examples/choose/custom-styles/main.go)
 
 ## Confirm
 
+`confirm` is a customizable component to confirm an anction.
+
 ### Default
+
+[Source Code](_examples/confirm/default/main.go)
 
 <img src="https://statics.sveltin.io/github/prompti/confirm/confirm-default.gif" alt="Confirm example">
 
 ### Custom styles
 
+[Source Code](_examples/confirm/custom-styles/main.go)
+
 <img src="https://statics.sveltin.io/github/prompti/confirm/confirm-styled.gif" alt="Confirm example with custom styles">
-
-#### Examples
-
-[Default](_examples/confirm/default/main.go)  | [Styled](_examples/confirm/custom-styles/main.go)
 
 ## Toggle
 
+`toggle` is a customizable component to confirm an anction. It works like `confirm` but it renders the options inline and not in a box.
+
 ### Default
+
+[Source Code](_examples/toggle/default/main.go)
 
 <img src="https://statics.sveltin.io/github/prompti/toggle/toggle-default.gif" alt="Toggle example">
 
 ### Custom styles
 
+[Source Code](_examples/toggle/custom-styles/main.go)
+
 <img src="https://statics.sveltin.io/github/prompti/toggle/toggle-styled.gif" alt="Toggle example with custom styles">
 
-#### Examples
+## ProgressBar
 
-[Default](_examples/toggle/default/main.go) | [Styled](_examples/toggle/custom-styles/main.go)
+`progressbar` is a customizable component for progress meter.
+
+### Default
+
+[Source Code](_examples/progressbar/default/main.go)
+
+<img src="https://statics.sveltin.io/github/prompti/progressbar/progressbar-default.gif" alt="ProgressBar example">
+
+### Styled
+
+[Source Code](_examples/progressbar/custom-styles/main.go)
+
+<img src="https://statics.sveltin.io/github/prompti/progressbar/progressbar-styled.gif" alt="ProgressBar example">
 
 ## :free: License
 
@@ -99,5 +124,3 @@ prompti is free and open-source software licensed under the MIT License.
 
 ***
 Made with [Charm](https://charm.sh).
-
-<a href="https://charm.sh/"><img alt="The Charm logo" src="https://stuff.charm.sh/charm-badge-unrounded.jpg" width="400"></a>
