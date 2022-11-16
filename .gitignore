@@ -61,3 +61,8 @@ Temporary Items
 *.out
 
 pre-release.sh
+
+# charmbracelet VHS files and output gif files
+*.tape
+output/
+vhs/
