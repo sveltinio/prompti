@@ -24,13 +24,15 @@ func (cfg *Config) setDefaults() {
 		cfg.OnCompletesMsg = "Done!"
 	}
 
-	cfg.OnProgressCmd = func(item string) tea.Cmd {
-		// This is where you'd do i/o stuff to download and install packages. In
-		// our case we're just pausing for a moment to simulate the process.
-		d := time.Millisecond * time.Duration(rand.Intn(500))
-		return tea.Tick(d, func(t time.Time) tea.Msg {
-			return IncrementMsg(item)
-		})
+	if cfg.OnProgressCmd == nil {
+		cfg.OnProgressCmd = func(item string) tea.Cmd {
+			// This is where you'd do i/o stuff to download and install packages. In
+			// our case we're just pausing for a moment to simulate the process.
+			d := time.Millisecond * time.Duration(rand.Intn(500))
+			return tea.Tick(d, func(t time.Time) tea.Msg {
+				return IncrementMsg(item)
+			})
+		}
 	}
 }
 
