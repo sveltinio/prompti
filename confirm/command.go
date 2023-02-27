@@ -14,6 +14,7 @@ const (
 
 // Config represents the struct to configure the tui command.
 type Config struct {
+	Message           string
 	Question          string
 	OkButtonLabel     string
 	CancelButtonLabel string
@@ -35,6 +36,7 @@ func (cfg *Config) setDefaults() {
 
 func (cfg *Config) initialModel() model {
 	return model{
+		message:           cfg.Message,
 		question:          cfg.Question,
 		okButtonLabel:     cfg.OkButtonLabel,
 		cancelButtonLabel: cfg.CancelButtonLabel,

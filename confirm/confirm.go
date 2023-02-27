@@ -7,6 +7,7 @@ import (
 )
 
 type model struct {
+	message           string
 	question          string
 	okButtonLabel     string
 	cancelButtonLabel string
@@ -59,9 +60,18 @@ func (m model) View() string {
 		neg = m.styles.ActiveButtonStyle.Render(m.cancelButtonLabel)
 	}
 
+	message := lipgloss.NewStyle().Render(m.message)
 	question := m.styles.QuestionStyle.Render(m.question)
 	buttons := lipgloss.JoinHorizontal(lipgloss.Left, aff, neg)
-	ui := m.styles.DialogStyle.Render(lipgloss.JoinVertical(lipgloss.Center, question, buttons))
+
+	var ui string
+	if !isEmpty(message) {
+		ui = m.styles.DialogStyle.Render(
+			lipgloss.JoinVertical(lipgloss.Center, message, "\n", question, buttons))
+	} else {
+		ui = m.styles.DialogStyle.Render(
+			lipgloss.JoinVertical(lipgloss.Center, question, buttons))
+	}
 
 	return lipgloss.NewStyle().Render(ui)
 }
