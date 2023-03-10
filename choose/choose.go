@@ -4,7 +4,6 @@ package choose
 import (
 	"fmt"
 	"io"
-	"strings"
 
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
@@ -41,8 +40,8 @@ func (d itemDelegate) Render(w io.Writer, m list.Model, index int, listItem list
 
 	fn := d.ItemStyle.Render
 	if index == m.Index() {
-		fn = func(s ...string) string {
-			return d.SelectedItemStyle.Render(strings.Join(s, ""))
+		fn = func(s string) string {
+			return d.SelectedItemStyle.Render(s)
 		}
 	}
 
