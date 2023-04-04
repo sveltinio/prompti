@@ -16,6 +16,10 @@ Lightweight and customizable interactive prompt components for Go based CLI.
     <a href="https://pkg.go.dev/github.com/sveltinio/prompti/" target="_blank">
         <img src="https://pkg.go.dev/badge/github.com/sveltinio/prompti/.svg" alt="go reference" />
     </a>
+     &nbsp;
+    <a href="https://github.com/sveltinio/sveltin/prompti" target="_blank">
+        <img src="https://img.shields.io/badge/version-v0.2.3-success?style=flat-square&logo=none" alt="sveltin cli version" />
+    </a>
 </p>
 
 **prompti** is a collection of TUI blocks initially created to be used by [sveltin](https://github.com/sveltinio/sveltin) and its use cases. We worked on it to allow customizations and make it available as standalone package. Here it is!
