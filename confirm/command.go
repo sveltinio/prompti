@@ -2,7 +2,6 @@ package confirm
 
 import (
 	"fmt"
-	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
 )
@@ -50,7 +49,8 @@ func (cfg *Config) initialModel() model {
 // action with an affirmative or negative answer.
 func Run(cfg *Config) (bool, error) {
 	cfg.setDefaults()
-	m, err := tea.NewProgram(cfg.initialModel(), tea.WithOutput(os.Stderr)).Run()
+	p := tea.NewProgram(cfg.initialModel())
+	m, err := p.Run()
 
 	if err != nil {
 		return false, fmt.Errorf("unable to run confirm: %w", err)

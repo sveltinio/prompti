@@ -53,5 +53,7 @@ func (cfg *Config) initialModel() model {
 // action with an affirmative or negative answer.
 func Run(cfg *Config) (tea.Model, error) {
 	cfg.setDefaults()
-	return tea.NewProgram(cfg.initialModel()).Run()
+	p := tea.NewProgram(cfg.initialModel())
+
+	return p.Run()
 }

@@ -3,7 +3,6 @@ package input
 import (
 	"errors"
 	"fmt"
-	"os"
 
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
@@ -65,7 +64,7 @@ func (cfg *Config) initialModel() model {
 // Run is used to prompt an input the user and retrieve the value.
 func Run(cfg *Config) (string, error) {
 	cfg.setDefaults()
-	p := tea.NewProgram(cfg.initialModel(), tea.WithOutput(os.Stderr))
+	p := tea.NewProgram(cfg.initialModel())
 
 	tm, err := p.Run()
 	if err != nil {

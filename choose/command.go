@@ -3,7 +3,6 @@ package choose
 import (
 	"errors"
 	"fmt"
-	"os"
 
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
@@ -56,7 +55,7 @@ func (cfg *Config) initialModel(items []list.Item) model {
 // Run is used to prompt a list of available options to the user and retrieve the selection.
 func Run(cfg *Config, items []list.Item) (string, error) {
 	cfg.setDefaults(len(items))
-	p := tea.NewProgram(cfg.initialModel(items), tea.WithOutput(os.Stderr))
+	p := tea.NewProgram(cfg.initialModel(items))
 
 	tm, err := p.Run()
 	if err != nil {
