@@ -17,7 +17,7 @@ Lightweight and customizable interactive prompt components for Go based CLI.
         <img src="https://pkg.go.dev/badge/github.com/sveltinio/prompti/.svg" alt="go reference" />
     </a>
      &nbsp;
-    <a href="https://github.com/sveltinio/sveltin/prompti" target="_blank">
+    <a href="https://github.com/sveltinio/prompti" target="_blank">
         <img src="https://img.shields.io/badge/version-v0.2.3-success?style=flat-square&logo=none" alt="sveltin cli version" />
     </a>
 </p>
