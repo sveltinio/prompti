@@ -51,3 +51,14 @@ func isEmpty(s interface{}) bool {
 		return false
 	}
 }
+
+func concatStrings(separator string, words ...string) string {
+	var result string
+	for i, s := range words {
+		if i > 0 {
+			result += ""
+		}
+		result += string(s)
+	}
+	return result
+}

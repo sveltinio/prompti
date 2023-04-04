@@ -40,8 +40,8 @@ func (d itemDelegate) Render(w io.Writer, m list.Model, index int, listItem list
 
 	fn := d.ItemStyle.Render
 	if index == m.Index() {
-		fn = func(s string) string {
-			return d.SelectedItemStyle.Render(s)
+		fn = func(s ...string) string {
+			return d.SelectedItemStyle.Render(concatStrings("", s...))
 		}
 	}
 
