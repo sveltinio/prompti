@@ -42,9 +42,8 @@ func (cfg *Config) initialModel() model {
 	ti.Placeholder = cfg.Placeholder
 	ti.TextStyle = cfg.Styles.TextStyle
 	ti.PromptStyle = prefixIconStyle(cfg.Styles.PrefixIconColor)
-	ti.BackgroundStyle = cfg.Styles.BackgroundStyle
 	ti.PlaceholderStyle = cfg.Styles.PlaceholderStyle
-	ti.CursorStyle = cfg.Styles.CursorStyle
+	ti.Cursor.Style = cfg.Styles.CursorStyle
 	if cfg.Password {
 		ti.EchoMode = textinput.EchoPassword
 		ti.EchoCharacter = '*'

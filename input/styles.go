@@ -18,7 +18,6 @@ var defaultTheme = Styles{
 	PrefixIcon:       questionMark,
 	PrefixIconColor:  purple,
 	TextStyle:        noStyle,
-	BackgroundStyle:  backgroundStyle,
 	PlaceholderStyle: placeholderStyle,
 	CursorStyle:      cursorStyle,
 }
@@ -41,7 +40,6 @@ var (
 	// styles
 	noStyle          = lipgloss.NewStyle()
 	placeholderStyle = noStyle.Copy().Faint(true)
-	backgroundStyle  = noStyle.Copy()
 	cursorStyle      = noStyle.Copy()
 	prefixIconStyle  = func(color lipgloss.AdaptiveColor) lipgloss.Style {
 		return lipgloss.NewStyle().MarginRight(1).Bold(true).Foreground(color)
@@ -73,9 +71,6 @@ func (t *Styles) setDefaults() {
 	}
 	if isEmpty(t.TextStyle) {
 		t.TextStyle = defaultTheme.TextStyle
-	}
-	if isEmpty(t.BackgroundStyle) {
-		t.BackgroundStyle = defaultTheme.BackgroundStyle
 	}
 	if isEmpty(t.PlaceholderStyle) {
 		t.PlaceholderStyle = defaultTheme.PlaceholderStyle
